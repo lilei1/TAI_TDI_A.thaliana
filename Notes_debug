@@ -1,0 +1,15 @@
+#TEST the old program!!!!
+perl /Users/mingqinshao/work_related/TAI_TDI_project/TAI_TDI_all_data/TAI_exp_phylo/TAI_caculate/TAI_calculate.pl phylo_normalized_expression_data_NSF_nso_strand-spec_Tsu_0_exp_rpkm.txt
+
+mv TAI_phylo_normalized_expression_data_NSF_nso_strand-spec_Tsu_0_exp_rpkm.txt ./debug_wrong_floral_TAI
+###it suggested that data "phylo_normalized_expression_data_NSF_nso_strand-spec_Tsu_0_exp_rpkm.txt" has no problem.
+
+###Then try another 
+
+ perl /Users/mingqinshao/work_related/TAI_TDI_project/TAI_TDI_all_data/Drost_data_TAI/bootstrape_1000/bootstrape_randomly_1000_phy.pl /Users/mingqinshao/work_related/TAI_TDI_project/TAI_TDI_all_data/Drost_data_TAI/phylo_normalized_expression_data_NSF_nso_strand-spec_Tsu_0_exp_rpkm.txt 
+
+ It shows the same number for floral bud!!!!!
+
+ ./test_bootstrape.pl /Users/mingqinshao/work_related/TAI_TDI_project/TAI_TDI_all_data/Drost_data_TAI/phylo_normalized_expression_data_NSF_nso_strand-spec_Tsu_0_exp_rpkm.txt 
+
+#I figure out the bug: because I print with the f_se as f_as, which lead to the same number of floral bud of TAI and TDI 
